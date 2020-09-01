@@ -1,12 +1,12 @@
 export const hotels = [
     {
         name: 'Vadstena Klosterhotell',
-        info: 'Ett välkänt hotell i Sverige. Har ett av Vadstenas bästa lägen och har riktat in sig på att bevara det historiska. Ett fyrstjärnigt hotell med ett fint spa och ett prisad mat.',
+        info: 'Ett välkänt hotell i Sverige. Har ett av Vadstenas bästa lägen och har riktat in sig på att bevara det historiska. Ett fyrstjärnigt hotell med ett fint spa och prisad mat.',
         link: 'https://www.klosterhotel.se/',
     },
     {
         name: 'Starby Hotell',
-        info: 'Det andra stora hotellet i Vadstena. Hotellet har riktat in sig på countrystil. Ett trestjärnigt hotell med god mat och hög service. På Starby Hotell har brudparet fått en fin rabatt. Kontakta brudparet om boendet är av intresse.',
+        info: 'Det andra stora hotellet i Vadstena. Hotellet har riktat in sig mot countrystil. God mat och hög service. På Starby Hotell kommer brudparet att spendera sin bröllopshelg. Hotellet har även givit förmånliga priser till alla gästerna. Om boendet är av intresse, kontakta bruden eller brudgummen.',
         link: 'https://www.starbyhotell.se/',
     },
     {
@@ -31,7 +31,7 @@ export const hotels = [
     },
     {
         name: 'Vadstena vandrarhem',
-        info: 'Vadstenas vandrarhem är beläget i centrala Vadstena. Ett mysigt sådan med förmånliga priser. Ett enklare boende för den som önskar.',
+        info: 'Vadstenas vandrarhem är beläget i centrala Vadstena. ett mysigt sådant med förmånliga priser. Ett enklare boende för den som önskar.',
         link: 'https://vadstenavandrarhem.se/',
     },
     {

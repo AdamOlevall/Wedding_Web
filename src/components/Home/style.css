@@ -71,7 +71,7 @@ p {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: 350px;
   box-shadow: 0px 0px 5px #5A685F;
   background-color: #ffffff;
   margin-bottom: 3rem;
@@ -130,6 +130,9 @@ a {
   .paper {
     padding: 4rem 2rem;
     width: 100%;
+    background-image: url("../../images/bakgrund_3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .body-text {
