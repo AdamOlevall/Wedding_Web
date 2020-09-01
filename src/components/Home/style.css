@@ -1,0 +1,147 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  min-height: 100vh;
+}
+
+.background-image {
+  background-image: url("../../images/bakgrund_3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 0;
+  min-height: 100vh;
+}
+
+p {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.header-text {
+  font-size: 3rem;
+  text-align: center;
+  width: 100%;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.body-text {
+  font-size: 16px;
+  text-align: center;
+  width: 65%;
+  color: gray;
+  margin-bottom: 1rem;
+}
+
+.body-text-small {
+  font-size: 14px;
+}
+
+.body-text-dark {
+  color: #353939;
+}
+
+.paper {
+  width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 4px 0px 31px #888888;
+  padding: 8rem 0;
+  background-color: white;
+}
+
+.block-list {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 750px;
+}
+
+.block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  box-shadow: 0px 0px 5px #5A685F;
+  background-color: #ffffff;
+  margin-bottom: 3rem;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  color: #353939;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.block:hover {
+ background-color: #F5F7F6;
+}
+
+.block:last-child {
+  cursor: unset;
+}
+
+.block:last-child:hover {
+  background-color: white;
+}
+
+.block-header {
+  position: relative;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #353939;
+  padding-bottom: 2px;
+}
+
+.block-text {
+  position: relative;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.block-link {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+@media screen and (max-width: 992px) {
+
+  .background-image{
+    padding: 0;
+  }
+
+  .paper {
+    padding: 4rem 2rem;
+    width: 100%;
+  }
+
+  .body-text {
+    width: 100%;
+  }
+
+  .block-list {
+    width: 100%;
+  }
+
+  .block {
+    width: 100%;
+  }
+
+}
