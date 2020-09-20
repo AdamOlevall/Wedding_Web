@@ -6,7 +6,7 @@ export const hotels = [
     },
     {
         name: 'Starby Hotell',
-        info: 'Det andra stora hotellet i Vadstena. Hotellet har riktat in sig mot countrystil. God mat och hög service. På Starby Hotell kommer brudparet att spendera sin bröllopshelg. Hotellet har även givit förmånliga priser till alla gästerna. Om boendet är av intresse, kontakta bruden eller brudgummen.',
+        info: 'Det andra stora hotellet i Vadstena. Hotellet har riktat in sig mot countrystil. God mat och hög service. På Starby Hotell kommer brudparet att spendera sin bröllopshelg. Hotellet har även givit förmånliga priser till alla gästerna. Om boendet är av intresse, kontakta brudparet.',
         link: 'https://www.starbyhotell.se/',
     },
     {
