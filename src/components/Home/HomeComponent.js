@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import './style.css';
 
 const HomeComponent = () =>  {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   return (
       <div className="background">
         {showModal && <div className="modal" onClick={() => setShowModal(false)}>
