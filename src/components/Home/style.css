@@ -5,12 +5,33 @@
   width: 100%;
   background-color: white;
   min-height: 100vh;
+  position: relative;
 }
 
-.background-image {
-  background-image: url("../../images/bakgrund_3.jpg");
+.modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: black;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-image {
+  background-image: url("../../images/challe.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  width: 400px;
+}
+
+
+.background-image {
+  background-image: url("../../images/bkg_top.png");
+  background-repeat: no-repeat;
+  background-size: contain;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -25,19 +46,23 @@ p {
 }
 
 .header-text {
-  font-size: 3rem;
-  text-align: center;
-  width: 100%;
-  color: black;
-  margin-bottom: 2rem;
-}
+   font-size: 2.5rem;
+   text-align: center;
+   width: 100%;
+   color: black;
+   margin-bottom: 2rem;
+ }
 
 .body-text {
   font-size: 16px;
-  text-align: center;
+  text-align: left;
   width: 65%;
   color: gray;
   margin-bottom: 1rem;
+}
+
+.body-text span {
+  font-weight: 400;
 }
 
 .body-text-small {
@@ -48,19 +73,25 @@ p {
   color: #353939;
 }
 
+.body-text-header {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
 .paper {
   width: 850px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 4px 0px 31px #888888;
-  padding: 8rem 0;
+  box-shadow: 4px 0 31px #888888;
+  padding: 5rem 0;
   background-color: white;
+  position: relative;
 }
 
 .block-list {
-  margin-top: 3rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -122,17 +153,28 @@ a {
 
 
 @media screen and (max-width: 992px) {
+  .modal-image {
+    width: 100%;
+  }
+
 
   .background-image{
     padding: 0;
+    background-image: none;
+    align-items: flex-start;
   }
 
   .paper {
     padding: 4rem 2rem;
     width: 100%;
-    background-image: url("../../images/bakgrund_3.jpg");
+    background-image: url("../../images/bkg_top.png");
+    box-shadow: none;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+  }
+
+  .header-text {
+    font-size: 1.5rem;
   }
 
   .body-text {

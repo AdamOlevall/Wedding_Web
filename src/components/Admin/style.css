@@ -1,0 +1,17 @@
+.attenders{
+    display: grid;
+    grid-template-columns:  1fr 2fr  1fr  1fr  1fr  1fr  1fr  1fr  1fr 1fr;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    width: 800px;
+}
+
+.attenders p {
+    font-size: 12px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.attender-heading {
+    font-weight: 500;
+}
