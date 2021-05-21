@@ -53,7 +53,6 @@ const App = () => {
           <MuiThemeProvider theme={muiTheme}>
             <Router history={history}>
                 <div className="nav-bar">
-                    <div className="nav-bar--inner">
                         <NavLink exact to="/">Start</NavLink>
                         <NavLink exact to="/covid">Covid</NavLink>
                         <NavLink exact to="/form">Anmälan</NavLink>
@@ -62,7 +61,6 @@ const App = () => {
                         <NavLink exact to="/brollops-dagen">Bröllopsdagen</NavLink>
                         <NavLink exact to="/kontakt">Kontakt</NavLink>
                         <NavLink exact to="/onskelista">Önskelista</NavLink>
-                    </div>
                 </div>
               <Switch>
                 <Route exact path="/" component={HomeComponent} />

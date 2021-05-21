@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { TextField, FormControl, FormLabel, FormControlLabel, RadioGroup, Radio } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { postUser } from '../../api';
+import { postForm } from '../../api';
 import {useForm} from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -41,6 +41,7 @@ const schema = yup.object().shape({
     fish: yup.string().required(),
     vegetarian: yup.string().required(),
     vegan: yup.string().required(),
+    allergy: yup.string(),
     transport: yup.string().required(),
 });
 
@@ -54,11 +55,12 @@ const Form = () => {
             lastName: '',
             mail: '',
             phone: '',
+            allergy: '',
         },
     });
 
     const onSubmit = (values) => {
-        postUser(values).then((res) => {
+        postForm(values).then((res) => {
             if (res.status === 200) {
                 setIsSucceeded(true);
             }
@@ -74,11 +76,12 @@ const Form = () => {
     const { ref: fishRef, ...fishRest } = register('fish');
     const { ref: vegetarianRef, ...vegetarianRest } = register('vegetarian');
     const { ref: veganRef, ...veganRest } = register('vegan');
+    const { ref: allergyRef, ...allergyRest } = register('allergy');
     const { ref: transportRef, ...transportRest } = register('transport');
     return (
         isSucceeded ?
             <div className="success-wrapper">
-                <p>{`${getValues().firstName} ${getValues().lastName}, ditt svar är registrerat!`}</p>
+                <p>{`${getValues().firstName}, ditt svar är registrerat!`}</p>
             </div> :
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <FormControl component="fieldset" className={classes.radioWrapper}>
@@ -132,6 +135,13 @@ const Form = () => {
                             <FormControlLabel value="nej" control={<Radio inputRef={weddingDayRef} {...weddingDayRest} />} label="Nej" />
                         </RadioGroup>
                         </FormControl>
+                        <FormControl component="fieldset" error={!!errors.transport} className={classes.formControl}>
+                            <FormLabel component="label">Transport under bröllopsdagen</FormLabel>
+                            <RadioGroup id="transport" aria-label="transport" name="transport" value={getValues().transport} className={classes.radioButtons}>
+                                <FormControlLabel value="ja" control={<Radio inputRef={transportRef} {...transportRest} />} label="Ja" />
+                                <FormControlLabel value="nej" control={<Radio inputRef={transportRef} {...transportRest} />} label="Nej" />
+                            </RadioGroup>
+                        </FormControl>
                         <FormControl component="fieldset" error={!!errors.meat} className={classes.formControl}>
                         <FormLabel component="label">Kött</FormLabel>
                         <RadioGroup id="meat" aria-label="meat" name="meat" value={getValues().meat} className={classes.radioButtons}>
@@ -160,13 +170,14 @@ const Form = () => {
                             <FormControlLabel value="nej" control={<Radio inputRef={veganRef} {...veganRest} />} label="Nej" />
                         </RadioGroup>
                         </FormControl>
-                        <FormControl component="fieldset" error={!!errors.transport} className={classes.formControl}>
-                        <FormLabel component="label">Transport</FormLabel>
-                        <RadioGroup id="transport" aria-label="transport" name="transport" value={getValues().transport} className={classes.radioButtons}>
-                            <FormControlLabel value="ja" control={<Radio inputRef={transportRef} {...transportRest} />} label="Ja" />
-                            <FormControlLabel value="nej" control={<Radio inputRef={transportRef} {...transportRest} />} label="Nej" />
-                        </RadioGroup>
-                        </FormControl>
+                        <TextField
+                            id="allergy"
+                            label="Eventuella allergier"
+                            inputRef={allergyRef}
+                            {...allergyRest}
+                            name="allergy"
+                            className={classes.textField}
+                        />
                     </FormControl>
                     <button className="submit-button" type="submit">Anmäl</button>
                 </form>

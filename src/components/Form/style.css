@@ -46,3 +46,9 @@ fieldset {
 .radio-button-wrapper {
    margin-top: 1rem;
 }
+
+@media screen and (max-width: 992px) {
+   .success-wrapper {
+      width: 100%;
+   }
+}

@@ -5,44 +5,35 @@ body {
 }
 
 .nav-bar {
- padding: 12px;
+    padding: 12px 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav-bar--inner {
-   display: flex;
-   align-items: center;
-   justify-content: center;
- }
 
-.nav-bar--inner a {
-  font-weight: 300;
-  margin: 0 10px;
-  font-size: 20px;
-  color: gray;
+.nav-bar a {
+      font-weight: 300;
+      padding: 0 10px;
+      font-size: 20px;
+      color: gray;
     white-space: nowrap;
 }
 
-.nav-bar--inner a.active {
+.nav-bar a.active {
   color: green;
 }
 
 @media screen and (max-width: 992px) {
     .nav-bar {
-        padding: 14px;
-    }
-
-    .nav-bar--inner {
-        display: flex;
-        align-items: center;
+        padding: 20px 0;
+        overflow: auto hidden;
+        white-space: nowrap;
         justify-content: flex-start;
-        overflow-y: scroll;
     }
 
-    .nav-bar--inner a {
-        margin: 0 15px;
+    .nav-bar a {
+        padding: 0 15px;
     }
 }
