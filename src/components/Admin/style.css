@@ -28,3 +28,23 @@
 .attender-heading {
     font-weight: 500;
 }
+
+@media screen and (max-width: 992px) {
+    .paper-admin {
+        padding: 4rem 1rem;
+        width: 100%;
+        background-image: url("../../images/bkg_top.png");
+        box-shadow: none;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .attenders{
+        grid-template-columns:  1fr  1fr  1fr  1fr;
+        width: 100%;
+    }
+
+    .only-desktop{
+        display: none
+    }
+}

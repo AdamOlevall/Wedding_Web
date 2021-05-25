@@ -143,14 +143,14 @@ const Form = () => {
                             </RadioGroup>
                         </FormControl>
                         <FormControl component="fieldset" error={!!errors.meat} className={classes.formControl}>
-                        <FormLabel component="label">Kött</FormLabel>
+                        <FormLabel component="label">Jag äter kött</FormLabel>
                         <RadioGroup id="meat" aria-label="meat" name="meat" value={getValues().meat} className={classes.radioButtons}>
                             <FormControlLabel value="ja" control={<Radio inputRef={meatRef} {...meatRest} />} label="Ja" />
                             <FormControlLabel value="nej" control={<Radio inputRef={meatRef} {...meatRest} />} label="Nej" />
                         </RadioGroup>
                         </FormControl>
                         <FormControl component="fieldset" error={!!errors.fish} className={classes.formControl}>
-                        <FormLabel component="label">Fisk</FormLabel>
+                        <FormLabel component="label">Jag äter fisk</FormLabel>
                         <RadioGroup id="fish"  aria-label="fish" name="fish" value={getValues().fish} className={classes.radioButtons}>
                             <FormControlLabel value="ja" control={<Radio inputRef={fishRef} {...fishRest} />} label="Ja" />
                             <FormControlLabel value="nej" control={<Radio inputRef={fishRef} {...fishRest} />} label="Nej" />
