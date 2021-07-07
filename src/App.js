@@ -54,11 +54,11 @@ const App = () => {
             <Router history={history}>
                 <div className="nav-bar">
                         <NavLink exact to="/">Start</NavLink>
-                        <NavLink exact to="/covid">Covid</NavLink>
-                        <NavLink exact to="/form">Anmälan</NavLink>
-                        <NavLink exact to="/boende">Boende</NavLink>
-                        <NavLink exact to="/dagen-innan">Dagen innan</NavLink>
-                        <NavLink exact to="/brollops-dagen">Bröllopsdagen</NavLink>
+                    {/*<NavLink exact to="/covid">Covid</NavLink>*/}
+                    {/*<NavLink exact to="/form">Anmälan</NavLink>*/}
+                    {/*<NavLink exact to="/boende">Boende</NavLink>*/}
+                    {/* <NavLink exact to="/dagen-innan">Dagen innan</NavLink>*/}
+                    {/* <NavLink exact to="/brollops-dagen">Bröllopsdagen</NavLink>*/}
                         <NavLink exact to="/kontakt">Kontakt</NavLink>
                         <NavLink exact to="/onskelista">Önskelista</NavLink>
                 </div>

@@ -73,6 +73,11 @@ p {
   color: #353939;
 }
 
+.day-header {
+  font-weight: 400;
+  font-size: 18px;
+}
+
 .body-text-header {
   font-size: 18px;
   margin-bottom: 0.5rem;
