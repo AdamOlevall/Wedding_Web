@@ -3,37 +3,3 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 100;
 }
-
-.nav-bar {
-    padding: 12px 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.nav-bar a {
-      font-weight: 300;
-      padding: 0 10px;
-      font-size: 20px;
-      color: gray;
-    white-space: nowrap;
-}
-
-.nav-bar a.active {
-  color: green;
-}
-
-@media screen and (max-width: 992px) {
-    .nav-bar {
-        padding: 20px 0;
-        overflow: auto hidden;
-        white-space: nowrap;
-        justify-content: flex-start;
-    }
-
-    .nav-bar a {
-        padding: 0 15px;
-    }
-}

@@ -1,21 +1,37 @@
 import React from 'react';
-import '../Home/style.css';
+import './style.css';
 
 const ContactComponent = () => {
     return (
-        <div className="background">
-            <div className="background-image">
-                <div className="paper">
-                    <p className="header-text">Kontaktuppgifter</p>
-                    <p className="body-text body-text-dark"><span>Bruden: </span>072-7304545</p>
-                    <p className="body-text body-text-dark"><span>Brudgummen: </span>070-790 90 63</p>
-                    <p className="body-text body-text-dark"><span>Mail: </span>einarssonwedding@gmail.com</p>
-                    <p className="body-text body-text-dark"><span>Toastmaster: </span>Joakim Svensson 070-256 04 54 & <br />Filip ‘Bruno’ Johansson 070-794 77 55</p>
-                    <p className="body-text body-text-dark"><span>Värdpar: </span>Emma Lindgren 073-986 66 33 & <br />Martin Gerdland 070-145 80 78</p>
-                    <p className="body-text body-text-dark"><span>Bröllopskoordinator: </span>Hanna Olsson freddyweddings@gmail.com</p>
-                </div>
+        <div className="background--contact">
+            <div className="layer--contact"></div>
+            <div className="content--contact">
+            <div  className="text-content--contact">
+                <p className="body-text-heading--contact">Bruden</p>
+                <p className="body-text-info--contact">072-591 12 22 alt. matildaoden@live.se</p>
             </div>
+            <div  className="text-content--contact">
+                <p className="body-text-heading--contact">Brudgummen</p>
+                <p className="body-text-info--contact">073-664 92 71 alt. adamolevall@gmail.com</p>
+            </div>
+            <div  className="text-content--contact">
+                <p className="body-text-heading--contact">Toastmasters</p>
+                <p className="body-text-info--contact">Jonas Pontusson 076-006 04 17 <br /> XXX XXX XXX-XXX</p>
+            </div>
+            <div  className="text-content--contact">
+                <p className="body-text-heading--contact">Värdpar</p>
+                <p className="body-text-info--contact">XXX XXX<br />XXX XXX</p>
+            </div>
+            <div  className="text-content--contact">
+                <p className="body-text-heading--contact">Bröllopskoordinatorer</p>
+                <p className="body-text-info--contact">Marianne Hernod <br /> Alexis Jilvero</p>
+            </div>          
         </div>
+    </div>
+
+                   
+
+ 
     );
 };
 

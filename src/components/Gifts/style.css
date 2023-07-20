@@ -1,0 +1,64 @@
+.background--gifts {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  background-image: url("../../images/gifta4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 150px;
+  min-height: 100vh;
+}
+
+.layer--gifts {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.content--gifts {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 0 34px;
+}
+
+.text-content--gifts  {
+  display: flex;
+  flex-direction: column;
+}
+
+.body-text-heading--gifts  {
+  font-size: 24px;
+font-weight: 300;
+text-align: center;
+color: pink;
+margin-bottom: 8px;
+  
+}
+.body-text-info--gifts  {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  margin-bottom: 24px;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 767px) {
+  .background--gifts {
+      padding-top: 90px;
+    }
+
+    .content--gifts {
+      width: 100%;
+    }
+}

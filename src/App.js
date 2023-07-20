@@ -1,46 +1,71 @@
 import React from 'react';
-import { Router, Route, Switch, Redirect, NavLink } from 'react-router-dom';
+import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { history } from './history';
 import HomeComponent from './components/Home';
 import FormComponent from './components/Form';
 import AdminComponent from './components/Admin';
-import AccommodationComponent from './components/Accommodation';
 import GiftsComponent from './components/Gifts';
-import DayBeforeComponent from './components/DayBefore';
+import WeddingPlannerComponent from './components/WeddingPlanner';
 import WeddingDayComponent from './components/WeddingDay';
+import NavbarComponent from './components/Navbar';
 import ContactComponent from './components/Contact';
-import CovidComponent from './components/Covid';
 
 const theme = {
     overrides: {
+        MuiFormControlLabel: {
+            label: {
+                color: 'white',
+                '&.Mui-focused': {
+                    color: 'white'
+                }
+            },
+        },
         MuiFormLabel: {
             root: {
-                color: 'grey',
+                color: 'pink',
                 '&.Mui-focused': {
-                    color: 'grey'
+                    color: 'pink'
                 }
             },
         },
         MuiInput: {
             underline: {
+                borderBottomColor: 'white',
                 '&:after': {
-                    borderBottomColor: 'grey',
+                    borderBottomColor: 'white',
+                    '&:hover' : {
+                        borderBottomColor: 'white',
+                    },
                 },
+                '&:before': {
+                    borderBottomColor: 'white',
+                },
+                '&:hover' : {
+                    borderBottomColor: 'white',
+                    '&:before': {
+                        borderBottomColor: 'white !important',
+                    },
+                },
+            },
+        },
+        MuiInputBase: {
+            root: {
+                color: 'white',
             },
         },
         MuiInputLabel: {
             root: {
-                color: 'grey',
+                color: 'pink',
             },
         },
         MuiRadio: {
             root: {
-                color: 'grey',
+                color: 'white',
             },
             colorSecondary: {
                 '&$checked': {
-                    color: 'grey',
+                    color: 'white',
                 },
             },
         },
@@ -52,28 +77,17 @@ const App = () => {
       return (
           <MuiThemeProvider theme={muiTheme}>
             <Router history={history}>
-                <div className="nav-bar">
-                        <NavLink exact to="/">Start</NavLink>
-                    {/*<NavLink exact to="/covid">Covid</NavLink>*/}
-                    {/*<NavLink exact to="/form">Anmälan</NavLink>*/}
-                    {/*<NavLink exact to="/boende">Boende</NavLink>*/}
-                    {/* <NavLink exact to="/dagen-innan">Dagen innan</NavLink>*/}
-                    {/* <NavLink exact to="/brollops-dagen">Bröllopsdagen</NavLink>*/}
-                        <NavLink exact to="/kontakt">Kontakt</NavLink>
-                        <NavLink exact to="/onskelista">Önskelista</NavLink>
-                </div>
-              <Switch>
-                <Route exact path="/" component={HomeComponent} />
-                <Route path="/form" component={FormComponent} />
-                <Route path="/admin" component={AdminComponent} />
-                <Route path="/boende" component={AccommodationComponent} />
-                <Route path="/onskelista" component={GiftsComponent} />
-                <Route path="/dagen-innan" component={DayBeforeComponent} />
-                <Route path="/brollops-dagen" component={WeddingDayComponent} />
-                <Route path="/kontakt" component={ContactComponent} />
-                <Route path="/covid" component={CovidComponent} />
-                <Redirect from="*" to="/" />
-              </Switch>
+                <NavbarComponent />
+                <Switch>
+                    <Route exact path="/" component={HomeComponent} />
+                    <Route path="/form" component={FormComponent} />
+                    <Route path="/admin" component={AdminComponent} />
+                    <Route path="/onskelista" component={GiftsComponent} />
+                    <Route path="/planering" component={WeddingPlannerComponent} />
+                    <Route path="/brollops-dagen" component={WeddingDayComponent} />
+                    <Route path="/kontakt" component={ContactComponent} />
+                    <Redirect from="*" to="/" />
+                </Switch>
             </Router>
           </MuiThemeProvider>
       );

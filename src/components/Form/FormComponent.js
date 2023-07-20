@@ -1,28 +1,34 @@
 import React, {useState} from 'react';
+import { Button } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
 import Form from './Form';
-import '../Home/style.css';
 import './style.css';
 
+const useStyles = makeStyles({
+    button: {
+        width: "100%",
+        marginBottom: "32px",
+        marginTop: "16px",
+
+    },
+});
+
 const FormComponent = () => {
-    const [forms, setForms] = useState([<Form key="0"/>]);
-    const addPerson = () => {
-        setForms([...forms, <Form key="1" />])
-    };
+    const classes = useStyles();
+    const [isSucceeded, setIsSucceeded] = useState(false);
     return (
-        <div className="background">
-            <div className="background-image">
-                <div className="paper">
-                    <p className="header-text">Anmälan</p>
-                    {
-                        forms.map(form => form)
-                    }
-                    {
-                        forms.length === 1 &&
-                        <button className="add-person-button" type="button" onClick={() => addPerson()}>Lägg till respektive</button>
-                    }
-                </div>
-            </div>
-        </div>
+        <div className="background--form">
+            <div className="layer--form"></div>
+            <div className="content--form">
+            {
+            isSucceeded ?
+            <div className="success-wrapper">
+                <p className="success-wrapper-text">Tack för ditt svar!</p>
+                <Button variant="contained" className={classes.button} onClick={() => setIsSucceeded(false)}>Lägg till ytterligare gäst</Button>
+            </div> :
+            <Form setIsSucceeded={setIsSucceeded}/>}
+           </div>
+    </div>
     );
 };
 

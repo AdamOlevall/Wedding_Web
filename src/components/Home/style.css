@@ -1,197 +1,69 @@
-.background {
+.background--home {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: white;
-  min-height: 100vh;
+  background-image: url("../../images/gifta3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow-y: scroll;
   position: relative;
 }
 
-.modal {
+.layer--home {
+  background-color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
-  right: 0;
-  background-color: black;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-}
-
-.modal-image {
-  background-image: url("../../images/challe.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: 400px;
-}
-
-
-.background-image {
-  background-image: url("../../images/bkg_top.png");
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 7rem 0;
-  min-height: 100vh;
+  height: 100%;
 }
 
-p {
-  margin: 0;
-  line-height: 1.2;
-}
-
-.header-text {
-   font-size: 2.5rem;
-   text-align: center;
-   width: 100%;
-   color: black;
-   margin-bottom: 2rem;
- }
-
-.body-text {
-  font-size: 16px;
-  text-align: left;
-  width: 65%;
-  color: gray;
-  margin-bottom: 1rem;
-}
-
-.body-text span {
-  font-weight: 400;
-}
-
-.body-text-small {
-  font-size: 14px;
-}
-
-.body-text-dark {
-  color: #353939;
-}
-
-.day-header {
-  font-weight: 400;
-  font-size: 18px;
-}
-
-.body-text-header {
-  font-size: 18px;
-  margin-bottom: 0.5rem;
-}
-
-.paper {
+.content--home {
   width: 850px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 4px 0 31px #888888;
   padding: 5rem 0;
-  background-color: white;
   position: relative;
 }
 
-.block-list {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 750px;
-}
+.header-text--home {
+   font-size: 100px;
+   text-align: center;
+   width: 100%;
+   color: white;
+   margin-bottom: 12px;
+ }
 
-.block {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 350px;
-  box-shadow: 0px 0px 5px #5A685F;
-  background-color: #ffffff;
-  margin-bottom: 3rem;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 1rem;
-  color: #353939;
-  border-radius: 4px;
-  cursor: pointer;
+ .header-text-small--home {
+  font-size: 50px;
+  text-align: center;
+  width: 100%;
+  color: white;
 }
-
-.block:hover {
- background-color: #F5F7F6;
-}
-
-.block:last-child {
-  cursor: unset;
-}
-
-.block:last-child:hover {
-  background-color: white;
-}
-
-.block-header {
-  position: relative;
-  font-size: 1rem;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #353939;
-  padding-bottom: 2px;
-}
-
-.block-text {
-  position: relative;
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-.block-link {
-  margin-top: 1rem;
-  font-size: 0.75rem;
-  cursor: pointer;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 
 @media screen and (max-width: 992px) {
-  .modal-image {
-    width: 100%;
+  .background--home {
+    background-size: auto;
   }
 
+  .header-text--home {
+    font-size: 85px;
+    margin-bottom: 24px;
+  }
+}
 
-  .background-image{
-    padding: 0;
-    background-image: none;
-    align-items: flex-start;
+@media screen and (max-width: 767px) {
+  .header-text--home {
+    font-size: 75px;
+    margin-bottom: 30px;
   }
 
-  .paper {
-    padding: 4rem 2rem;
-    width: 100%;
-    background-image: url("../../images/bkg_top.png");
-    box-shadow: none;
-    background-repeat: no-repeat;
-    background-size: contain;
+  .header-text-small--home {
+    font-size: 40px;
   }
-
-  .header-text {
-    font-size: 1.5rem;
-  }
-
-  .body-text {
-    width: 100%;
-  }
-
-  .block-list {
-    width: 100%;
-  }
-
-  .block {
-    width: 100%;
-  }
-
+  
 }
