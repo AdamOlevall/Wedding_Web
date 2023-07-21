@@ -1,6 +1,7 @@
 import React from 'react';
-import { Paper, LinearProgress } from '@material-ui/core';
+import { Paper, LinearProgress, CircularProgress } from '@material-ui/core';
 import moment from 'moment';
+import { postTask, getTasks, addAssignee, toggleCompleteTask } from '../../api';
 import Category from './Category';
 import './style.css';
 
@@ -74,63 +75,113 @@ const getCategoryIdBasedOnCurrentDate = () => {
 
 const WeddingPlannerComponent = () => {
     const [tasks, setTasks] = React.useState([]);
+    const [isLoading, setIsLoading] = React.useState(false);
+
+   React.useEffect(() => {
+    startLoading();
+        getTasks()
+        .then(data => {
+            setTasks(data);
+            finishLoading();
+        })
+    }, []);
+
     const completedTasks = tasks.filter(task => task.isDone);
 
-    const setIsDone = (isDone, id) => {
-        const taskToUpdate = tasks.find(task => task.id === id) || {};
-        const updatedTask = {
-            ...taskToUpdate,
-            isDone: isDone,
-        }
-        const newList = [...tasks.filter(task => task.id !== id), updatedTask];
-        setTasks(newList);
+    const startLoading = () => {
+        setIsLoading(true);
+        document.body.style.overflow = 'hidden'
+    };
 
+    const finishLoading = () => {
+        setIsLoading(false);
+        document.body.style.overflow = 'unset'
     };
 
     const setAssignee = (assignee, id) => {
-        const taskToUpdate = tasks.find(task => task.id === id) || {};
-        const updatedTask = {
-            ...taskToUpdate,
-            assignee: assignee,
-        }
-        const newList = [...tasks.filter(task => task.id !== id), updatedTask];
-        setTasks(newList);
+        startLoading();
+        addAssignee({id, assignee}).then((res) => {
+            if (res.status === 200) {
+                getTasks().then(data => {
+                    setTasks(data);
+                    finishLoading();
+                })
+            } else {
+                finishLoading();
+            }
+        });
     };
+
+    const addTask = (task) => {
+        startLoading();
+        postTask(task).then((res) => {
+            if (res.status === 200) {
+                getTasks().then(data => {
+                    setTasks(data);
+                    finishLoading();
+                })
+            } else {
+                finishLoading();
+            }
+        });
+    };
+
+    const setCompleteTask = (isDone, id) => {
+        startLoading();
+        toggleCompleteTask({id, isDone}).then((res) => {
+            if (res.status === 200) {
+                getTasks().then(data => {
+                    setTasks(data);
+                    finishLoading();
+                })
+            } else {
+                finishLoading();
+            }
+        });
+    };
+
     const currentCategoryId = getCategoryIdBasedOnCurrentDate();
     const currentCategory = categories.find(category => category.id === currentCategoryId);
     const taskForCurrentCategory = tasks.filter(task => task.category === currentCategoryId);
     const completedTasksForCurrentCategory = taskForCurrentCategory.filter(task => task.isDone);
     return (
-        <div className="background--wedding-planer">
-            <div className="layer--wedding-planer"></div>   
-            <div className="content--wedding-planer">
-                <Paper className="overview--wedding-planer">
-                    <div className="overview-row--wedding-planer">
-                        <p className="overview-header--wedding-planer">Övergripande status: {completedTasks.length}/{tasks.length} </p>
-                        <LinearProgress variant="determinate" value={tasks.length === 0 ? 0 : Math.round((completedTasks.length/tasks.length)*100)} />
-                    </div>
-                    <div className="overview-row--wedding-planer">
-                        <p className="current-period-header--wedding-planer">Nuvarande period är {currentCategory.label}. Status {completedTasksForCurrentCategory.length}/{taskForCurrentCategory.length} </p>
-                        <LinearProgress variant="determinate" value={taskForCurrentCategory.length === 0 ? 0 : Math.round((completedTasksForCurrentCategory.length/taskForCurrentCategory.length)*100)} />
-                    </div>
-                </Paper>
-            </div>
+        <>
+            <div className="background--wedding-planer">
+                <div className="layer--wedding-planer"></div>   
                 <div className="content--wedding-planer">
-                {
-                    categories.map(category=>(
-                        <Category
-                            key={category.id}
-                            category={category}
-                            tasks={tasks}
-                            setTasks={setTasks}
-                            setIsDone={setIsDone}
-                            setAssignee={setAssignee}
-                            currentCategoryId={currentCategoryId}
-                        />
-                    ))
-                }
+                    <Paper className="overview--wedding-planer">
+                        <div className="overview-row--wedding-planer">
+                            <p className="overview-header--wedding-planer">Övergripande status: {completedTasks.length}/{tasks.length} </p>
+                            <LinearProgress variant="determinate" value={tasks.length === 0 ? 0 : Math.round((completedTasks.length/tasks.length)*100)} />
+                        </div>
+                        <div className="overview-row--wedding-planer">
+                            <p className="current-period-header--wedding-planer">Nuvarande period är {currentCategory.label}. Status {completedTasksForCurrentCategory.length}/{taskForCurrentCategory.length} </p>
+                            <LinearProgress variant="determinate" value={taskForCurrentCategory.length === 0 ? 0 : Math.round((completedTasksForCurrentCategory.length/taskForCurrentCategory.length)*100)} />
+                        </div>
+                    </Paper>
+                </div>
+                    <div className="content--wedding-planer">
+                    {
+                        categories.map(category=>(
+                            <Category
+                                key={category.id}
+                                category={category}
+                                tasks={tasks}
+                                addTask={addTask}
+                                setCompleteTask={setCompleteTask}
+                                setAssignee={setAssignee}
+                                currentCategoryId={currentCategoryId}
+                            />
+                        ))
+                    }
+                </div>
             </div>
-        </div>
+            {isLoading && 
+            <div className="loader--wedding-planer">
+                <CircularProgress size={100}/>    
+            </div>
+            }
+        </>
     );
 };
 

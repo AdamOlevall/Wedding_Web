@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     },
 });
 
-const Category = ({category, tasks = [], setTasks, setIsDone, setAssignee, currentCategoryId}) => {
+const Category = ({category, tasks = [], addTask, setCompleteTask, setAssignee, currentCategoryId}) => {
     const classes = useStyles();
     const [textField, setTextField] = React.useState("");
     const taskForThisCategory = tasks.filter(task => task.category === category.id);
@@ -35,14 +35,14 @@ const Category = ({category, tasks = [], setTasks, setIsDone, setAssignee, curre
                     variant="contained"
                     className={classes.button}
                     onClick={() => {
-                        setTasks([...tasks, {
+                        addTask({
                             id: v4(),
                             assignee: null,
                             text: textField,
                             isDone: false,
                             category: category.id,
                             created: Date.now(),
-                        }]);
+                        });
                         setTextField("");
                     }}
                     disabled={textField.length === 0}
@@ -53,12 +53,12 @@ const Category = ({category, tasks = [], setTasks, setIsDone, setAssignee, curre
              <List>
                 {
                     notCompletedTasks.sort((a,b) => b.created - a.created).map(task => (
-                        <ListItem key={task.id} task={task} setAssignee={setAssignee} setIsDone={setIsDone}/>
+                        <ListItem key={task.id} task={task} setAssignee={setAssignee} setCompleteTask={setCompleteTask}/>
                     ))
                 }
                 {
                     completedTasks.sort((a,b) => b.created - a.created).map(task => (
-                        <ListItem key={task.id} task={task} setAssignee={setAssignee} setIsDone={setIsDone}/>
+                        <ListItem key={task.id} task={task} setAssignee={setAssignee} setCompleteTask={setCompleteTask}/>
                     ))
                 }
             </List>

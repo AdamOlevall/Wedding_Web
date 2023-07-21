@@ -3,10 +3,10 @@ import {Checkbox, Button, Dialog, Chip} from '@material-ui/core';
 import './style.css';
 
 const names = ["Adam", "Matilda", "Lovisa", "Alexis", "Majsan", "Mix", "Sanna", "Nicke", "Andreas", "Maja", "Robin"];
-const ListItemComponent = ({task, setAssignee, setIsDone}) => {
+const ListItemComponent = ({task, setAssignee, setCompleteTask}) => {
     const [isModalOpen, setIsModalOpen] = React.useState(false);
     const handleChange = (event) => {
-        setIsDone(event.target.checked, task.id);
+        setCompleteTask(event.target.checked, task.id);
       };
     return (
         <>
