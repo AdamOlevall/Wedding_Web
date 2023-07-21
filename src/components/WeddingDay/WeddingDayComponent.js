@@ -8,8 +8,8 @@ const WeddingDayComponent = () => {
             <div className="layer--wedding-day"></div>
             <div className="content--wedding-day">
             {
-            faq.map(currentQuestion => (
-            <div className="text-content--wedding-day">
+            faq.map((currentQuestion, i) => (
+            <div className="text-content--wedding-day" key={i}>
                     <p className="body-text-heading--wedding-day">{currentQuestion.question}</p>
                     <p className="body-text-info--wedding-day">{currentQuestion.answer}</p>
                 </div>
