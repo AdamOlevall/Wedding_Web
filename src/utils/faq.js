@@ -1,7 +1,7 @@
 export const faq = [
     {
         question: 'ÄNTLIGEN dags för bröllop igen! Vart ska jag infinna mig?',
-        answer: 'Vigseln kommer genomföras i brudens hemmakyrka, Badelunda kyrka.',
+        answer: 'Vigseln kommer att äga rum i brudens hemmakyrka, Badelunda kyrka.',
     },
     {
         question: 'Bra val! När börjar det?',
@@ -20,7 +20,11 @@ export const faq = [
         answer: 'Det kommer inte erbjudas någon transport hem. Dels för att det är tråkigt att ha fasta sluttider på festen, och dels för att det ligger så pass nära Västerås att det går utmärkt att lösa transport hem på egen hand i form av taxi eller upphämtning.',
     }, 
     {
-        question: 'Köper det! Hur gör vi med barn?',
+        question: 'Köper det! Vad har jag på mig en dag som denna?',
+        answer: 'Ta på dig något du tycker är fint så är vi säkra på att det blir bra!',
+    },
+    {
+        question: 'Då har jag koll på kläderna. Barnen då?',
         answer: 'Festen gör sig bäst utan barn. Om det krisar med barnvakt kan dom få närvara i kyrkan!',
     },
     {
