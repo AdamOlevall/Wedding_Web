@@ -24,19 +24,10 @@
   flex-direction: column;
 }
 
-.body-text-heading--gifts  {
-  font-size: 24px;
-font-weight: 300;
-text-align: center;
-color: white;
-margin-bottom: 8px;
-  
-}
 .body-text-info--gifts  {
   font-size: 20px;
   text-align: center;
   color: white;
-  margin-bottom: 24px;
   line-height: 1.5;
   font-weight: 300;
 }

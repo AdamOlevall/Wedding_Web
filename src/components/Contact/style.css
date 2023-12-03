@@ -25,6 +25,10 @@
     margin-bottom: 12px;
 }
 
+.text-content--contact:last-child {
+  margin-bottom: 0;
+}
+
 .body-text-heading--contact {
     font-size: 26px;
   text-align: center;
@@ -42,6 +46,9 @@
     font-weight: 300;
   }
   
+  .body-text-info--contact:last-child {
+    margin-bottom: 0;
+  }
   @media screen and (max-width: 767px) {
     .background--contact {
         padding-top: 90px;

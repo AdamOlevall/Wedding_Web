@@ -21,7 +21,7 @@ export const faq = [
     }, 
     {
         question: 'Köper det! Vad har jag på mig en dag som denna?',
-        answer: 'Ta på dig något du tycker är fint så är vi säkra på att det blir bra!',
+        answer: 'Klädkoden för dagen är den inte alltför strikta Kavaj. Google finns till er hjälp om ni är osäkra på vad den klädkoden innebär.',
     },
     {
         question: 'Då har jag koll på kläderna. Barnen då?',
@@ -42,6 +42,10 @@ export const faq = [
     {
         question: 'Om jag har allergier då?',
         answer: 'Då nämner du bara det i anmälan!',
+    },
+    {
+        question: 'Jag vill gärna hålla ett tal eller göra ett främträdande under middagen, vem pratar jag med?',
+        answer: 'Då kontaktar du någon av våra Toastmasters så ser dom till att du får en stund i rampljuset!',
     },
     {
         question: 'Detta låter ju som en kanondag! En sista fråga, hur länge är festen igång?',
