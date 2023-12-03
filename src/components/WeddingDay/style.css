@@ -37,7 +37,7 @@
 }
 
 .body-text-heading--wedding-day {
-    font-size: 30px;
+    font-size: 24px;
   text-align: center;
   color: white;
   margin-bottom: 12px;
@@ -65,11 +65,6 @@
       .content--wedding-day {
         width: 100%;
       }
-
-      .body-text-heading--wedding-day {
-        font-size: 24px;
-        
-    }
   }
   
   
