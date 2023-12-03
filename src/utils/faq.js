@@ -41,10 +41,10 @@ export const faq = [
     },
     {
         question: 'Detta låter ju som en kanondag! En sista fråga, hur länge är festen igång?',
-        answer: 'Det finns ingen sluttid på festen. Bandet har också lovat att köra så länge det är bra ös på dansgolvet. Så det är upp till gästerna när vi stägner ner.',
+        answer: 'Det finns ingen sluttid på festen. Bandet har också lovat att köra så länge det är bra ös på dansgolvet. Så det är upp till gästerna när vi stänger ner.',
     },
     {
         question: 'Wow! Känner att jag måste anmäla mig direkt! Hur gör jag det?',
-        answer: 'Anmälan görs under OSA-länken uppe till höger. Svara gärna senast 24e juni.',
+        answer: 'Anmälan görs under OSA-länken i menyn. Svara gärna senast 24e juni, oavsett om ni kommer eller ej',
     },
 ];
