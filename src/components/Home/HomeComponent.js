@@ -4,9 +4,8 @@ import './style.css';
 const HomeComponent = () =>  {
   return (
     <div className="background--home">
-      <div className="layer--home"></div>
       <div className="content--home">
-              <p className="header-text--home">Adam och Matilda</p>
+              <p className="header-text--home">Adam & Matilda</p>
               <p className="header-text-small--home">2024.08.24</p>
       </div>
     </div>

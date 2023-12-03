@@ -7,14 +7,14 @@ import './style.css';
 const useStyles = makeStyles({
     button: {
         fontSize: "24px",
-        color: "pink"
+        color: "white"
     },
     link: {
         fontSize: "24px",
         color: "white",
         textDecoration: "none",
         "&.active": {
-            color: "pink",
+            color: "#bfcbb6",
         }   
     },
 });
@@ -54,7 +54,7 @@ const NavBarComponent = () => {
                     style: {
                         marginTop: "32px",
                         marginLeft: "-16px",
-                        background: "rgba(0, 0, 0, 0.5)",
+                        background: "rgba(0, 0, 0, 0.75)",
                         boxShadow: "none",
                       
                     }

@@ -2,27 +2,18 @@
 
 .background--admin {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     width: 100%;
-    background-image: url("../../images/gifta4.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     position: relative;
     padding-top: 150px;
     min-height: 100vh;
   }
-  
-  .layer--admin {
-    background-color: rgba(0, 0, 0, 0.3);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
+
 
 .attenders {
+    margin-top: 12px;
     display: grid;
     grid-template-columns:  2fr 1fr 1fr 1fr;
     border-top: 1px solid white;

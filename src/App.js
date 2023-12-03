@@ -23,28 +23,28 @@ const theme = {
         },
         MuiFormLabel: {
             root: {
-                color: 'pink',
+                color: 'white',
                 '&.Mui-focused': {
-                    color: 'pink'
+                    color: 'white'
                 }
             },
         },
         MuiInput: {
             underline: {
-                borderBottomColor: 'white',
+                borderBottomColor: '#bfcbb6',
                 '&:after': {
-                    borderBottomColor: 'white',
+                    borderBottomColor: '#bfcbb6',
                     '&:hover' : {
-                        borderBottomColor: 'white',
+                        borderBottomColor: '#bfcbb6',
                     },
                 },
                 '&:before': {
-                    borderBottomColor: 'white',
+                    borderBottomColor: '#bfcbb6',
                 },
                 '&:hover' : {
-                    borderBottomColor: 'white',
+                    borderBottomColor: '#bfcbb6',
                     '&:before': {
-                        borderBottomColor: 'white !important',
+                        borderBottomColor: '#bfcbb6 !important',
                     },
                 },
             },
@@ -56,7 +56,7 @@ const theme = {
         },
         MuiInputLabel: {
             root: {
-                color: 'pink',
+                color: 'white',
             },
         },
         MuiRadio: {
@@ -77,6 +77,7 @@ const App = () => {
       return (
           <MuiThemeProvider theme={muiTheme}>
             <Router history={history}>
+                <div className="layer"></div>
                 <NavbarComponent />
                 <Switch>
                     <Route exact path="/" component={HomeComponent} />

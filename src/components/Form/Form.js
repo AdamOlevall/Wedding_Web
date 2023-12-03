@@ -28,10 +28,15 @@ const useStyles = makeStyles({
         width: "100%",
         marginBottom: "32px",
         marginTop: "16px",
+        background: "#bfcbb6",
+        color: 'white',
 
     },
     formControl: {
         marginTop: '1rem',
+    },
+    formLabel: {
+        lineHeight: '1.5',
     },
 });
 
@@ -95,7 +100,7 @@ const Form = ({setIsSucceeded}) => {
                         </RadioGroup>
                         </FormControl>
                         <FormControl component="fieldset" error={!!errors.transport} className={classes.formControl}>
-                            <FormLabel component="label">Jag vill ha transport i from av buss</FormLabel>
+                            <FormLabel component="label" className={classes.formLabel}>Jag vill ha transport från kyrkan till festlokalen</FormLabel>
                             <RadioGroup id="transport" aria-label="transport" name="transport" value={getValues().transport} className={classes.radioButtons}>
                                 <FormControlLabel value="ja" control={<Radio inputRef={transportRef} {...transportRest} />} label="Ja" />
                                 <FormControlLabel value="nej" control={<Radio inputRef={transportRef} {...transportRest} />} label="Nej" />
@@ -110,7 +115,7 @@ const Form = ({setIsSucceeded}) => {
                             className={classes.textField}
                         />
                     </FormControl>
-                    <Button variant="contained" className={classes.button} type="submit">Anmäl</Button>
+                    <Button variant="contained" className={classes.button} type="submit">Skicka in</Button>
                 </form>
     );
 };

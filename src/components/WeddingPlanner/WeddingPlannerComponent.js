@@ -146,8 +146,8 @@ const WeddingPlannerComponent = () => {
     const completedTasksForCurrentCategory = taskForCurrentCategory.filter(task => task.isDone);
     return (
         <>
-            <div className="background--wedding-planer">
-                <div className="layer--wedding-planer"></div>   
+            <div className="background--wedding-planer"> 
+            <div className="scroll-area--wedding-planer"> 
                 <div className="content--wedding-planer">
                     <Paper className="overview--wedding-planer">
                         <div className="overview-row--wedding-planer">
@@ -175,6 +175,7 @@ const WeddingPlannerComponent = () => {
                         ))
                     }
                 </div>
+            </div>
             </div>
             {isLoading && 
             <div className="loader--wedding-planer">

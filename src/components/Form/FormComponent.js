@@ -9,6 +9,8 @@ const useStyles = makeStyles({
         width: "100%",
         marginBottom: "32px",
         marginTop: "16px",
+        background: "#bfcbb6",
+        color: 'white'
 
     },
 });
@@ -18,7 +20,6 @@ const FormComponent = () => {
     const [isSucceeded, setIsSucceeded] = useState(false);
     return (
         <div className="background--form">
-            <div className="layer--form"></div>
             <div className="content--form">
             {
             isSucceeded ?
