@@ -5,8 +5,8 @@ body {
   background-image: url("./images/adammatilda.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100svh;
-  max-height: 100svh;
+  height: 100dvh;
+  max-height: 100dvh;
   overflow: hidden;
 }
 
