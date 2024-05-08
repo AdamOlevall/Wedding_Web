@@ -1,24 +1,20 @@
 export const faq = [
     {
         question: 'ÄNTLIGEN dags för bröllop igen! Vart ska jag infinna mig?',
-        answer: 'Vigseln kommer att äga rum i brudens hemmakyrka, Badelunda kyrka.',
+        answer: 'Vigseln samt festen kommer ske på Säby Loge utanför Västerås (ca 15 minuter med bil).',
     },
     {
-        question: 'Bra val! När börjar det?',
+        question: 'Jättemysigt ställe! När börjar det?',
         answer: 'Tid för vigsel är 16:00, så var gärna på plats ca 30 minuter innan.',
     },
     {
-        question: 'Är det bara vigsel eller åker vi vidare efteråt?',
-        answer: 'Givetvis ska vi vidare! Efter vigseln kommer vi ta oss ut till Säby Gård. Där blir det mottagning av brudparet, mingel, middag och fest.',
+        question: 'Kan du dra hela schemat i detalj så det inte blir några missförstånd?',
+        answer: 'Efter vigseln blir det mottagning av brudparet som följs upp av ett mingel. Sen sätter vi oss till bords och avnjuter en middag tillsammns innan vi kör igång festen.',
     },
     {
-        question: 'Hur tar vi oss till Säby gård?',
-        answer: 'Det kommer finnas busstransport från kyrkan till festlokalen. Vill man ha en plats på bussen klickar man i det när man anmäler sig till bröllopet. Annars går det givetvis bra att lösa egen transport.',
+        question: 'Hur ser transporten ut till och från Säby Loge? Det är ju ändå 15 minuter bort.',
+        answer: 'Det kommer inte erbjudas någon transport av oss. Vi tänker att dom flesta kan lösa skjuts ut och för hemresan vill vi undivka att ha fasta sluttider för festen. Där jobbar vi på att lösa rabbatkoder till taxis genom sammarbete med Säby Loge.',
     },
-    {
-        question: 'Och hur kommer vi hem från Säby gård?',
-        answer: 'Det kommer inte erbjudas någon transport hem. Dels för att det är tråkigt att ha fasta sluttider på festen, och dels för att det ligger så pass nära Västerås att det går utmärkt att lösa transport hem på egen hand i form av taxi eller upphämtning.',
-    }, 
     {
         question: 'Köper det! Vad har jag på mig en dag som denna?',
         answer: 'Klädkoden för dagen är den inte alltför strikta Kavaj. Google finns till er hjälp om ni är osäkra på vad den klädkoden innebär.',
@@ -36,7 +32,7 @@ export const faq = [
         answer: 'Vi vet att gästerna dricker ansvarsfullt!',
     },
     {
-        question: 'Får vi någon mat eller är det bara flytande föda?',
+        question: 'Vad sa ni om mat nu igen? Blir man mättad under kvällen?',
         answer: 'Det kommer serveras tilltugg till minglet och sedan blir det middag.',
     },
     {
