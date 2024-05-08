@@ -56,6 +56,7 @@ const Form = ({setIsSucceeded}) => {
             firstName: '',
             lastName: '',
             allergy: '',
+            transport: 'nej',
         },
     });
 
@@ -70,7 +71,7 @@ const Form = ({setIsSucceeded}) => {
     const { ref: lastNameRef, ...lastNameRest } = register('lastName');
     const { ref: weddingDayRef, ...weddingDayRest } = register('weddingDay');
     const { ref: allergyRef, ...allergyRest } = register('allergy');
-    const { ref: transportRef, ...transportRest } = register('transport');
+
     return (
             <form onSubmit={handleSubmit(onSubmit)}>
                     <FormControl component="fieldset" className={classes.radioWrapper}>
@@ -98,13 +99,6 @@ const Form = ({setIsSucceeded}) => {
                             <FormControlLabel value="ja" control={<Radio inputRef={weddingDayRef} {...weddingDayRest} />} label="Ja" />
                             <FormControlLabel value="nej" control={<Radio inputRef={weddingDayRef} {...weddingDayRest} />} label="Nej" />
                         </RadioGroup>
-                        </FormControl>
-                        <FormControl component="fieldset" error={!!errors.transport} className={classes.formControl}>
-                            <FormLabel component="label" className={classes.formLabel}>Jag vill ha transport från kyrkan till festlokalen</FormLabel>
-                            <RadioGroup id="transport" aria-label="transport" name="transport" value={getValues().transport} className={classes.radioButtons}>
-                                <FormControlLabel value="ja" control={<Radio inputRef={transportRef} {...transportRest} />} label="Ja" />
-                                <FormControlLabel value="nej" control={<Radio inputRef={transportRef} {...transportRest} />} label="Nej" />
-                            </RadioGroup>
                         </FormControl>
                         <TextField
                             id="allergy"
