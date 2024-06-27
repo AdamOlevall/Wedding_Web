@@ -13,9 +13,8 @@ const AdminComponent = () => {
         })
     }, []);
 
-    const sortedAttendersOnName = attenders.sort((a, b) => a.firstName - b.firstName)
-    console.log(attenders);
-    console.log(sortedAttendersOnName);
+    const sortedAttendersOnName = attenders.sort((a, b) => a.firstName.localeCompare(b.firstName))
+
     return (
         <div className="background--admin">
              <div className="scroll-area--admin">
