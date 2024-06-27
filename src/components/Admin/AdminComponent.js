@@ -13,6 +13,8 @@ const AdminComponent = () => {
         })
     }, []);
 
+    const sortedAttendersOnName = attenders.sort((a, b) => a.name - b.name)
+
     return (
         <div className="background--admin">
              <div className="scroll-area--admin">
@@ -35,7 +37,7 @@ const AdminComponent = () => {
                             
 
                             {
-                                attenders
+                                sortedAttendersOnName
                                 .filter(val => `${val.firstName.toLowerCase()}  ${val.lastName.toLowerCase()}`.includes(searchValue.toLowerCase()))
                                 .map(attender => (
                                     <React.Fragment>
