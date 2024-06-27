@@ -13,7 +13,7 @@ const AdminComponent = () => {
         })
     }, []);
 
-    const sortedAttendersOnName = attenders.sort((a, b) => a.name - b.name)
+    const sortedAttendersOnName = attenders.sort((a, b) => a.firstName - b.firstName)
 
     return (
         <div className="background--admin">
