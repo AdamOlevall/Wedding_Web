@@ -21,7 +21,7 @@ export const faq = [
     },
     {
         question: 'Då har jag koll på kläderna. Barnen då?',
-        answer: 'Festen gör sig bäst utan barn. Om det krisar med barnvakt kan dom få närvara i kyrkan!',
+        answer: 'Festen gör sig bäst utan barn. Om det krisar med barnvakt kan dom få närvara under vigseln!',
     },
     {
         question: 'Helt rätt! För jag antar att det kommer förtäras en del alkohol?',
