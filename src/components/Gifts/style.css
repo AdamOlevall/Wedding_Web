@@ -15,8 +15,8 @@
   align-items: center;
   justify-content: center;
   padding: 32px;
+  padding-top: 0;
   position: relative;
-  background: rgba(224, 224, 224, 0.3)
 }
 
 .text-content--gifts  {
@@ -39,5 +39,8 @@
 
     .content--gifts {
       width: 100%;
+      top: 40%;
+      position: absolute;
+      transform: translateY(-50%);
     }
 }

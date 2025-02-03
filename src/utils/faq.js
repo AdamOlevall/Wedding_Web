@@ -1,22 +1,22 @@
 export const faq = [
     {
-        question: 'ÄNTLIGEN dags för bröllop igen! Vart ska jag infinna mig?',
-        answer: 'Vigseln samt festen kommer ske på Säby Loge utanför Västerås (ca 15 minuter med bil).',
+        question: 'ÄNTLIGEN dags för bröllopsdagen! Vart ska jag infinna mig?',
+        answer: 'Vigseln samt festen kommer äga rum på Tängsta Gård utanför Västerås (ca 30 minuter med bil).',
     },
     {
         question: 'Jättemysigt ställe! När börjar det?',
-        answer: 'Tid för vigsel är 16:00, så var gärna på plats ca 30 minuter innan.',
+        answer: 'Tid för vigsel är 15:00, så var gärna på plats ca 30 minuter innan.',
     },
     {
         question: 'Kan du dra hela schemat i detalj så det inte blir några missförstånd?',
-        answer: 'Efter vigseln blir det mottagning av brudparet som följs upp av ett mingel. Sen sätter vi oss till bords och avnjuter en middag tillsammns innan vi kör igång festen.',
+        answer: 'Efter vigseln blir det mottagning av brudparet som följs upp av ett mingel. Sen sätter vi oss till bords och avnjuter en middag tillsammans innan vi kör igång festen.',
     },
     {
-        question: 'Hur ser transporten ut till och från Säby Loge? Det är ju ändå 15 minuter bort.',
-        answer: 'Det kommer inte erbjudas någon transport av oss. Vi tänker att dom flesta kan lösa skjuts ut och för hemresan vill vi undivka att ha fasta sluttider för festen. Där jobbar vi på att lösa rabbatkoder till taxis genom sammarbete med Säby Loge.',
+        question: 'Hur ser transporten ut till och från Tängsta Gård? Det är ju ändå 30 minuter bort.',
+        answer: 'Till vigseln får ni själva stå för transporten. Till hemresan håller vi på att kolla på en lösning så att alla kommer hem till Västerås. Vi återkommer med mer info.',
     },
     {
-        question: 'Köper det! Vad har jag på mig en dag som denna?',
+        question: 'Uppfattat! Men vad har jag på mig en dag som denna?',
         answer: 'Klädkoden för dagen är den inte alltför strikta Kavaj. Google finns till er hjälp om ni är osäkra på vad den klädkoden innebär.',
     },
     {
@@ -41,14 +41,14 @@ export const faq = [
     },
     {
         question: 'Jag vill gärna hålla ett tal eller göra ett främträdande under middagen, vem pratar jag med?',
-        answer: 'Då kontaktar du någon av våra Toastmasters så ser dom till att du får en stund i rampljuset!',
+        answer: 'Då kontaktar du någon av våra Toastmasters (förslagsvis Josefin om du vill vara på den säkra sidan) så ser dom till att du får en stund i rampljuset!',
     },
     {
         question: 'Detta låter ju som en kanondag! En sista fråga, hur länge är festen igång?',
-        answer: 'Det finns ingen sluttid på festen. Bandet har också lovat att köra så länge det är bra ös på dansgolvet. Så det är upp till gästerna när vi stänger ner.',
+        answer: 'Det finns ingen sluttid på festen. Så det är upp till gästerna när vi stänger ner.',
     },
     {
         question: 'Wow! Känner att jag måste anmäla mig direkt! Hur gör jag det?',
-        answer: 'Anmälan görs under OSA-länken i menyn. Svara gärna senast 24e juni, oavsett om ni kommer eller ej',
+        answer: 'Anmälan görs under OSA-länken i menyn. Svara gärna senast 25e april, oavsett om ni kommer eller ej.',
     },
 ];

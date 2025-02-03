@@ -25,7 +25,7 @@ fieldset {
 
 .submit-button {
    color: white;
-   background-color: #4d6b69;
+   background-color: #616bdd;
    width: 300px;
    border-radius: 6px;
    padding: 8px 0;
@@ -39,7 +39,7 @@ fieldset {
 
 .add-person-button {
    color: white;
-   background-color: #4d6b69;
+   background-color: #616bdd;
    border-radius: 6px;
    display: flex;
    align-items: center;

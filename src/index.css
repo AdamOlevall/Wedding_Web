@@ -2,13 +2,14 @@ html {
   margin: 0;
   font-family: 'Playfair Display', serif;
   font-weight: 400;
-  background-image: url("./images/adammatilda.png");
+  background-image: url("./images/mobile.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100dvh;
   max-height: 100dvh;
   overflow: hidden;
 }
+
 body {
   height: 100%;
 }
@@ -18,10 +19,23 @@ body {
 }
 
 .layer {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+  html {
+    background-image: url("./images/ipad.png");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  html {
+    background-image: url("./images/desktop.png");
+  }
 }

@@ -7,15 +7,16 @@ const ContactComponent = () => {
             <div className="content--contact">
             <div  className="text-content--contact">
                 <p className="body-text-heading--contact">Bruden</p>
-                <p className="body-text-info--contact">072-591 12 22 <br /> matildaoden@live.se</p>
+                <p className="body-text-info--contact">076-255 79 90 <br /> maja-1999@hotmail.com</p>
             </div>
             <div  className="text-content--contact">
                 <p className="body-text-heading--contact">Brudgummen</p>
-                <p className="body-text-info--contact">073-664 92 71 <br />adamolevall@gmail.com</p>
+                <p className="body-text-info--contact">073-924 36 63<br />robin_andersson14@hotmail.com</p>
             </div>
             <div  className="text-content--contact">
                 <p className="body-text-heading--contact">Toastmasters</p>
-                <p className="body-text-info--contact">Johan Lindblom 073-959 01 55 <br /> Simon Alzén 073-775 63 42</p>
+                <p className="body-text-info--contact">Josefin Hjälmeby Holmberg <br />073-386 10 05<br />Mohsen Jahangir<br />073-677 07 40<br />De föredrar dock att bli kontaktade på<br />toastmasters@majaochrobin.se</p>
+            
             </div>
         </div>
     </div>

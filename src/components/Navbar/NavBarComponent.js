@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         color: "white",
         textDecoration: "none",
         "&.active": {
-            color: "#bfcbb6",
+            color: "#616bdd",
         }   
     },
 });
@@ -33,8 +33,9 @@ const NavBarComponent = () => {
         <>
         <div className="nav-bar--desktop">
             <div>
-                <NavLink exact to="/">Start</NavLink>        
-                <NavLink exact to="/brollops-dagen">Bröllopsdagen</NavLink>
+                <NavLink exact to="/">Start</NavLink>
+                <NavLink exact to="/mingel">Mingel 25:e Juli </NavLink>     
+                <NavLink exact to="/brollops-dagen">Bröllopsdagen 26:e Juli </NavLink>
                 <NavLink exact to="/kontakt">Kontakt</NavLink>
                 <NavLink exact to="/onskelista">Önskelista</NavLink>
             </div>
@@ -61,7 +62,8 @@ const NavBarComponent = () => {
                   }}
             >
                 <MenuItem onClick={handleClose}><NavLink className={classes.link} exact to="/">Start</NavLink></MenuItem>
-                <MenuItem onClick={handleClose}><NavLink className={classes.link} exact to="/brollops-dagen">Bröllopsdagen</NavLink></MenuItem>
+                <MenuItem onClick={handleClose}><NavLink className={classes.link} exact to="/mingel">Mingel 25:e Juli</NavLink></MenuItem>
+                <MenuItem onClick={handleClose}><NavLink className={classes.link} exact to="/brollops-dagen">Bröllopsdagen 26:e Juli</NavLink></MenuItem>
                 <MenuItem onClick={handleClose}><NavLink className={classes.link} exact to="/kontakt">Kontakt</NavLink></MenuItem>
                 <MenuItem onClick={handleClose}><NavLink className={classes.link} exact to="/onskelista">Önskelista</NavLink></MenuItem>
                 <MenuItem onClick={handleClose}><NavLink className={classes.link} exact to="/form">OSA</NavLink> </MenuItem>

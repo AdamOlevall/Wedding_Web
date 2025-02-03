@@ -16,10 +16,14 @@
     color: white;
      white-space: nowrap;
      text-decoration: none;
+ 
 }
 
   .nav-bar--desktop a.active {
-    color: #bfcbb6;
+    color: #616bdd;
+    background: rgba(224, 224, 224, 0.8);
+    padding: 0 4px;
+    border-radius: 8px;
   }
 
   .nav-bar--mobile  {
@@ -36,7 +40,7 @@
 }
 
   .nav-bar--mobile a.active {
-    color: pink;
+    color: #616bdd;
   }
 
 

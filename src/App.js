@@ -8,6 +8,7 @@ import AdminComponent from './components/Admin';
 import GiftsComponent from './components/Gifts';
 import WeddingPlannerComponent from './components/WeddingPlanner';
 import WeddingDayComponent from './components/WeddingDay';
+import MingelComponent from './components/Mingel';
 import NavbarComponent from './components/Navbar';
 import ContactComponent from './components/Contact';
 
@@ -31,20 +32,20 @@ const theme = {
         },
         MuiInput: {
             underline: {
-                borderBottomColor: '#bfcbb6',
+                borderBottomColor: '#616bdd',
                 '&:after': {
-                    borderBottomColor: '#bfcbb6',
+                    borderBottomColor: '#616bdd',
                     '&:hover' : {
-                        borderBottomColor: '#bfcbb6',
+                        borderBottomColor: '#616bdd',
                     },
                 },
                 '&:before': {
-                    borderBottomColor: '#bfcbb6',
+                    borderBottomColor: '#616bdd',
                 },
                 '&:hover' : {
-                    borderBottomColor: '#bfcbb6',
+                    borderBottomColor: '#616bdd',
                     '&:before': {
-                        borderBottomColor: '#bfcbb6 !important',
+                        borderBottomColor: '#616bdd !important',
                     },
                 },
             },
@@ -85,6 +86,7 @@ const App = () => {
                     <Route path="/admin" component={AdminComponent} />
                     <Route path="/onskelista" component={GiftsComponent} />
                     <Route path="/planering" component={WeddingPlannerComponent} />
+                    <Route path="/mingel" component={MingelComponent} />
                     <Route path="/brollops-dagen" component={WeddingDayComponent} />
                     <Route path="/kontakt" component={ContactComponent} />
                     <Redirect from="*" to="/" />

@@ -2,7 +2,7 @@ import React from 'react';
 import { TextField, FormControl, FormLabel, FormControlLabel, RadioGroup, Radio, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { postForm } from '../../api';
-import {useForm} from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import './style.css';
@@ -28,7 +28,7 @@ const useStyles = makeStyles({
         width: "100%",
         marginBottom: "32px",
         marginTop: "16px",
-        background: "#bfcbb6",
+        background: "#616bdd",
         color: 'white',
 
     },
@@ -43,9 +43,10 @@ const useStyles = makeStyles({
 const schema = yup.object().shape({
     firstName: yup.string().required(),
     lastName: yup.string().required(),
+    mingle: yup.string().required(),
     weddingDay: yup.string().required(),
     allergy: yup.string(),
-    transport: yup.string().required(),
+    kids: yup.string(),
 });
 
 const Form = ({setIsSucceeded}) => {
@@ -56,7 +57,7 @@ const Form = ({setIsSucceeded}) => {
             firstName: '',
             lastName: '',
             allergy: '',
-            transport: 'nej',
+            kids: '',
         },
     });
 
@@ -67,10 +68,13 @@ const Form = ({setIsSucceeded}) => {
             }
         });
     };
+
     const { ref: firstNameRef, ...firstNameRest } = register('firstName');
     const { ref: lastNameRef, ...lastNameRest } = register('lastName');
+    const { ref: mingleRef, ...mingleRest } = register('mingle');
     const { ref: weddingDayRef, ...weddingDayRest } = register('weddingDay');
     const { ref: allergyRef, ...allergyRest } = register('allergy');
+    const { ref: kidsRef, ...kidsRest } = register('kids');
 
     return (
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -93,8 +97,23 @@ const Form = ({setIsSucceeded}) => {
                             className={classes.textField}
                             error={!!errors.lastName}
                         />
+                         <FormControl component="fieldset" error={!!errors.weddingDay} className={classes.formControl}>
+                        <FormLabel component="label">Jag vill delta på minglet 25:e Juli</FormLabel>
+                        <RadioGroup id="mingle" aria-label="mingle" name="mingle" value={getValues().weddingDay } className={classes.radioButtons}>
+                            <FormControlLabel value="ja" control={<Radio inputRef={mingleRef} {...mingleRest} />} label="Ja" />
+                            <FormControlLabel value="nej" control={<Radio inputRef={mingleRef} {...mingleRest} />} label="Nej" />
+                        </RadioGroup>
+                        </FormControl>
+                        <TextField
+                            id="kids"
+                            label="Om ni tar med barn, nämn hur många här"
+                            inputRef={kidsRef}
+                            {...kidsRest}
+                            name="kids"
+                            className={classes.textField}
+                        />
                         <FormControl component="fieldset" error={!!errors.weddingDay} className={classes.formControl}>
-                        <FormLabel component="label">Jag deltar gärna på ert bröllop 24/8</FormLabel>
+                        <FormLabel component="label">Jag vill delta på bröllopet 26:e Juli</FormLabel>
                         <RadioGroup id="weddingDay" aria-label="weddingDay" name="weddingDay" value={getValues().weddingDay } className={classes.radioButtons}>
                             <FormControlLabel value="ja" control={<Radio inputRef={weddingDayRef} {...weddingDayRest} />} label="Ja" />
                             <FormControlLabel value="nej" control={<Radio inputRef={weddingDayRef} {...weddingDayRest} />} label="Nej" />

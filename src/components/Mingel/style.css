@@ -1,14 +1,26 @@
-.background--contact {
+.background--mingel-day {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 75px;
+  }
+  
+  .scroll-area--mingel-day {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     width: 100%;
     position: relative;
-    padding-top: 150px;
     height: 100%;
+    overflow: scroll;
+    padding-top: 75px;
   }
-  
-  .content--contact {
+
+  .content--mingel-day {
     width: 850px;
     display: flex;
     flex-direction: column;
@@ -19,45 +31,43 @@
     position: relative;
   }
 
-.text-content--contact {
+.text-content--mingel-day {
     display: flex;
     flex-direction: column;
-    margin-bottom: 12px;
 }
 
-.text-content--contact:last-child {
-  margin-bottom: 0;
-}
-
-.body-text-heading--contact {
-    font-size: 26px;
+.body-text-heading--mingel-day {
+    font-size: 24px;
   text-align: center;
   color: white;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
     
 }
-  .body-text-info--contact {
+  .body-text-info--mingel-day {
+    font-family: 'Roboto';
     font-size: 20px;
     text-align: center;
     color: white;
     margin-bottom: 24px;
     line-height: 1.5;
-    font-family: 'Roboto';
     font-weight: 300;
   }
-  
-  .body-text-info--contact:last-child {
-    margin-bottom: 0;
-  }
+
   @media screen and (max-width: 767px) {
-    .background--contact {
-        padding-top: 90px;
+    .background--mingel-day {
+        padding-top: 54px;
       }
 
-      .content--contact {
+      .scroll-area--mingel-day {
+        padding-top: 0;
+      }
+
+      .content--mingel-day {
         width: 100%;
         top: 40%;
         position: absolute;
         transform: translateY(-50%);
       }
   }
+  
+  
