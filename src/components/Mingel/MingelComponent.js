@@ -11,18 +11,22 @@ const WeddingDayComponent = () => {
                         <p className="body-text-info--mingel-day">16:00 - 20:00</p>
                     </div>
                     <div className="text-content--mingel-day" key={2}>
-                        <p className="body-text-heading--mingel-day">Vart?</p>
+                        <p className="body-text-heading--mingel-day">Plats</p>
                         <p className="body-text-info--mingel-day">Urhagsgatan 2</p>
                     </div>
                     <div className="text-content--mingel-day" key={3}>
+                        <p className="body-text-heading--mingel-day">Dresscode</p>
+                        <p className="body-text-info--mingel-day">Sommarfin</p>
+                    </div>
+                    <div className="text-content--mingel-day" key={4}>
                         <p className="body-text-heading--mingel-day">Barn</p>
                         <p className="body-text-info--mingel-day">Barn är välkomna på minglet, men nämn detta i anmälan.</p>
                     </div>
-                    <div className="text-content--mingel-day" key={4}>
+                    <div className="text-content--mingel-day" key={5}>
                         <p className="body-text-heading--mingel-day">Mat</p>
                         <p className="body-text-info--mingel-day">Bandykorv, givetvis.</p>
                     </div>
-                    <div className="text-content--mingel-day" key={4}>
+                    <div className="text-content--mingel-day" key={6}>
                         <p className="body-text-heading--mingel-day">Dryck</p>
                         <p className="body-text-info--mingel-day">Finns på plats.</p>
                     </div>

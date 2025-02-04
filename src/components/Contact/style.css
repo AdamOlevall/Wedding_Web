@@ -56,8 +56,5 @@
 
       .content--contact {
         width: 100%;
-        top: 40%;
-        position: absolute;
-        transform: translateY(-50%);
       }
   }

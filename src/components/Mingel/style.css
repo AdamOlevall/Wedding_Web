@@ -17,7 +17,7 @@
     position: relative;
     height: 100%;
     overflow: scroll;
-    padding-top: 75px;
+    padding-top: 40px;
   }
 
   .content--mingel-day {
@@ -57,16 +57,8 @@
     .background--mingel-day {
         padding-top: 54px;
       }
-
-      .scroll-area--mingel-day {
-        padding-top: 0;
-      }
-
       .content--mingel-day {
         width: 100%;
-        top: 40%;
-        position: absolute;
-        transform: translateY(-50%);
       }
   }
   

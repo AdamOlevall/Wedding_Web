@@ -41,7 +41,7 @@ export const faq = [
     },
     {
         question: 'Jag vill gärna hålla ett tal eller göra ett främträdande under middagen, vem pratar jag med?',
-        answer: 'Då kontaktar du någon av våra Toastmasters (förslagsvis Josefin om du vill vara på den säkra sidan) så ser dom till att du får en stund i rampljuset!',
+        answer: 'Då vänder du dig till våra Toastmasters (se Kontakt), så ser dom till att du får en stund i rampljuset!',
     },
     {
         question: 'Detta låter ju som en kanondag! En sista fråga, hur länge är festen igång?',
